@@ -1,0 +1,26 @@
+CREATE DATABASE pvrmovie;
+
+-- User accounts table
+CREATE TABLE user_accounts (
+    fname VARCHAR(50),
+    lname VARCHAR(50),
+    user_name VARCHAR(50) PRIMARY KEY,
+    password VARCHAR(50),
+    phno VARCHAR(10) UNIQUE,
+    gender VARCHAR(1),
+    dob DATE,
+    age INT
+);
+
+-- Booking tables
+CREATE TABLE non_ac (
+    mname VARCHAR(100),
+    Gender VARCHAR(1),
+    Date DATE,
+    tkts INT,
+    phno VARCHAR(10),
+    booked_seats TEXT
+);
+
+CREATE TABLE ac LIKE non_ac;
+CREATE TABLE firstclass LIKE non_ac;
